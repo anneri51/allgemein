@@ -1,0 +1,13 @@
+sqlplus sys@xe as sysdba
+show parameter db_name
+show con_name
+alter session set container = xepdb1;
+
+@apexins.sql SYSAUX SYSAUX TEMP /i/
+@apxchpwd.sql
+
+alter user anonymous
+alter user xdb
+
+
+Berechtigung auf apex ordner für jeden und dann @apxldimg.sql
